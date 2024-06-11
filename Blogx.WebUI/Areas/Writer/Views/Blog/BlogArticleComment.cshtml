@@ -1,0 +1,49 @@
+﻿@model List<Comment>
+@{
+    ViewData["Title"] = "BlogArticleComment";
+    Layout = "~/Areas/Writer/Views/WriterLayout/Index.cshtml";
+}
+
+<div class="col-xl-12 col-sm-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body px-0 overflow-auto">
+            <h4 class="card-title pl-4">Purchase History</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>Yorum Yapan Kişi</th>
+                            <th>Blog Başlığı</th>
+                            <th>Durum</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        @foreach (var item in Model)
+                        {
+                          
+
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="@item.AppUser.ImageUrl" alt="image" />
+                                    <div class="table-user-name ml-3">
+                                        <p class="mb-0 font-weight-medium">@item.AppUser.Name @item.AppUser.Surname.ToUpper()</p>
+                                     
+                                    </div>
+                                </div>
+                            </td>
+                                <td> @item.Article.Title</td>
+                            <td>
+                                <div class="badge badge-inverse-success"> @item.Status</div>
+                            </td>
+                            <td>@item.Content</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>>
+

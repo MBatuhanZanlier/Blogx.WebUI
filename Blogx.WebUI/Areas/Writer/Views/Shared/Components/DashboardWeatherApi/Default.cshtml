@@ -1,0 +1,22 @@
+﻿@model Blogx.WebUI.Areas.Writer.Models.WeatherApiViewModel
+<div class="col-xl-8 grid-margin stretch-card">
+    <div class="card card-calender">
+        <div class="card-body">
+            <div class="row pt-4">
+                <div class="col-sm-6">
+                    <h1 class="text-white">@DateTime.Now</h1>
+                    <h5 class="text-white">Şehir: @Model.name</h5>
+                    <h5 class="text-white pt-2 m-0">Durum:Parçalı Bulutlu</h5>
+                    <h5 class="text-white m-0">Nem:@Model.main.humidity %</h5>
+                    <h5 class="text-white m-0">Rüzgar:@Model.wind.speed  km/h</h5>
+                </div>
+                <div class="col-sm-6 text-sm-right pt-3 pt-sm-0">
+                    <h3 class="text-white">@Model.main.temp</h3>
+                    <p class="text-white m-0">@Model.sys.country</p>
+                    <h3 class="text-white m-0">@Model.name</h3>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

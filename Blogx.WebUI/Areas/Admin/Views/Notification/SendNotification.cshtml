@@ -1,0 +1,24 @@
+﻿@model Notification
+@{
+    ViewData["Title"] = "SendNotification";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminPageLayout.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kategori Ekleme</h4>
+            <form class="forms-sample" method="post">
+                @Html.Label("Bildirim Başlığı")
+                @Html.TextBoxFor(x => x.NotificationTitle, new { @class = "form-control" })
+                <br />
+                @Html.Label("Bildirim Açıklaması")
+                @Html.TextBoxFor(x => x.NotificationDescription, new { @class = "form-control" })
+                <br />
+                <button class="btn btn-outline-info">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Writer/Views/WriterLayout/Index.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container-scroller">
+    
+            <div class="main-panel">
+                <div class="content-wrapper pb-0">
+                @await Component.InvokeAsync("DashboardHeadComponentsPartial")
+               
+                    <div class="row">
+                    @await Component.InvokeAsync("DashboardWigetCardComponentsPartial")
+              
+                    </div>
+                    <div class="row">
+                    @await Component.InvokeAsync("DashboardAppuserListComponentPartial")
+
+                    @await Component.InvokeAsync("DashboarBlogListComponentsPartial")
+                    </div>
+                    <div class="row">
+                    @await Component.InvokeAsync("DasboardTodolistComponentsPartial")
+                    @await Component.InvokeAsync("DashboardCategoryListComponentPartial")
+                  
+
+                        <div class="col-xl-4 col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                <h4 class="card-title text-black">Aylık blog paylaşımları</h4>
+                                    <p class="text-muted pb-2">@DateTime.Today.ToShortDateString()</p>
+                                    <canvas id="surveyBar"></canvas>
+                                    <div class="row border-bottom pb-3 pt-4 align-items-center mx-0">
+                                        <div class="col-sm-9 pl-0">
+                                            <div class="d-flex">
+                                                <img src="assets/images/dashboard/img_4.jpg" alt="" />
+                                                <div class="pl-2">
+                                                    <h6 class="m-0">Haftalık blog paylaşımları</h6>
+                                                    <p class="m-0">Geçen Hafta</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 pl-0 pl-sm-3">
+                                            <div class="badge badge-inverse-success mt-3 mt-sm-0"> +7.7% </div>
+                                        </div>
+                                    </div>
+                                    <div class="row py-3 align-items-center mx-0">
+                                        <div class="col-sm-9 pl-0">
+                                            <div class="d-flex">
+                                                <img src="assets/images/dashboard/img_5.jpg" alt="" />
+                                                <div class="pl-2">
+                                                    <h6 class="m-0">Bu hafta</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 pl-0 pl-sm-3">
+                                            <div class="badge badge-inverse-success mt-3 mt-sm-0"> +7.7% </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    @await Component.InvokeAsync("DashboardWeatherApi")
+
+                        <div class="col-xl-4 grid-margin stretch-card">
+                            <!--activity-->
+                        @await Component.InvokeAsync("DashboardNotificationComponentsPartial")
+                            <!--activity ends-->
+                        </div>
+                    </div>
+                    
+                </div>
+      
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/flot/jquery.flot.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/flot/jquery.flot.resize.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/flot/jquery.flot.categories.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/flot/jquery.flot.fillbetween.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/flot/jquery.flot.stack.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/flot/jquery.flot.pie.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/off-canvas.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/hoverable-collapse.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+</body>
+</html>

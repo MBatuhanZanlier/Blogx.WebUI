@@ -1,0 +1,16 @@
+﻿@model Blog.EntityLayer.Category
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<div class="container">
+    <form method="post">  
+        @Html.HiddenFor(x=>x.CategoryId)
+        <label>Kategori Adını Giriniz</label>
+        <input type="text" class="form-control" asp-for="CategoryName" />
+        <br />
+        <button class="btn btn-outline-primary">Yeni Kategori Girişi</button>
+    </form>
+</div>
+

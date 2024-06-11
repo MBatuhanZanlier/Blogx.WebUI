@@ -1,0 +1,23 @@
+﻿@model List<Article>
+<div class="col-xl-4 col-sm-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title font-weight-medium">Bloglarım</div>
+            <p class="text-muted">Yazdığınız Son 3 Bloglarınız burada listenilir</p>
+            @foreach (var item in Model)
+            {
+
+                <div class="d-flex flex-wrap border-bottom py-2 border-top justify-content-between">
+                    <img class="survey-img mb-lg-3" src="@item.CoverImageUrl" alt="" />
+                    <div class="pt-2">
+                        <h5 class="mb-0">@item.Title</h5>
+                        <p class="mb-0 text-muted">@item.CreatedDate.ToShortDateString()</p>
+                    </div>
+                </div>
+            }
+
+
+            <a class="text-black mt-3 d-block font-weight-medium h6" href="#">Tüm Bloglarım <i class="mdi mdi-chevron-right"></i></a>
+        </div>
+    </div>
+</div>

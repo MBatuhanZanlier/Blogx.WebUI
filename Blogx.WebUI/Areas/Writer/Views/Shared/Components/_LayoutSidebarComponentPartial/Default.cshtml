@@ -1,0 +1,59 @@
+﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+        <a class="sidebar-brand brand-logo" href="../../index.html"><img src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/images/logo.svg" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="../../index.html"><img src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/images/logo-mini.svg" alt="logo" /></a>
+    </div>
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                    <img src="@ViewBag.ımage" alt="profile" />
+                    <span class="login-status online">@ViewBag.namesurname</span>
+                   
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Dashboard/Index">
+                <i class="mdi mdi-home menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Blog/MyBlogList">
+                <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">Bloglarım</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Support/Index">
+                <i class="mdi mdi-help menu-icon"></i>
+                <span class="menu-title">Destek</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Message/MessageList">
+                <i class="mdi mdi-message menu-icon"></i>
+                <span class="menu-title">Mesajlarım</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Message/SendMessageList">
+                <i class="mdi mdi-send menu-icon"></i>
+                <span class="menu-title">Gönderilen Mesajlar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+                <i class="mdi mdi-settings menu-icon"></i>
+                <span class="menu-title">Ayarlarım</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+                <i class="mdi mdi-home menu-icon"></i>
+                <span class="menu-title">Çıkış Yap</span>
+            </a>
+        </li>
+    </ul>
+</nav>

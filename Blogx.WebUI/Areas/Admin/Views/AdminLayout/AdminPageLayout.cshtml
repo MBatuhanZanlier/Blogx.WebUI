@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_AdminLayoutHeadPartial")
+@await Component.InvokeAsync("_AdminLayoutNavbarComponent")
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
+       @*  @await Component.InvokeAsync("_AdminLayoutNavbarComponent") *@
+
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            @await Component.InvokeAsync("_AdminLayoutSidebar")
+            <div class="main-panel">
+                <div class="content-wrapper">
+                     @RenderBody()
+                </div>
+                @await Component.InvokeAsync("_AdminLayoutFooterComponent")
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("_AdminLayoutScriptComponentPartial")
+
+</body>
+
+</html>
+
+
+</html>
+
+

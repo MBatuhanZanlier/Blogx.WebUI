@@ -1,0 +1,27 @@
+﻿@model List<Category>
+<div class="card">
+    <div class="card-body">
+        <p class="card-title mb-0">Kategori Listesi</p>
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th class="pl-0  pb-2 border-bottom">Kategori Adı</th>
+                    
+                    </tr>
+                </thead>
+                <tbody> 
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="pl-0">@item.CategoryName</td>
+                        
+                        </tr>
+                    }
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

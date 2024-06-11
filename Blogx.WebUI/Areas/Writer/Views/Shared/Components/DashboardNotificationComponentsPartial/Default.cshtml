@@ -1,0 +1,25 @@
+﻿@model List<Notification>
+
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">
+                <span class="d-flex justify-content-between">
+                    <span>Bildirimler</span>
+
+                </span>
+            </h4>
+            @foreach (var item in Model)
+            {
+                <ul class="gradient-bullet-list border-bottom">
+                    <li>
+                        <h6 class="mb-0">@item.NotificationTitle</h6>
+                        <p class="text-muted">@item.NotificationDate.ToShortDateString()</p>
+                    </li>
+                </ul>
+            }
+
+            <a class="text-black mt-3 mb-0 d-block h6" href="#">Tüm bildirimleri görüntüle<i class="mdi mdi-chevron-right"></i></a>
+        </div>
+    </div>
+
